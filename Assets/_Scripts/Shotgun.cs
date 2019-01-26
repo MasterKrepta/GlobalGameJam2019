@@ -5,6 +5,7 @@ using UnityEngine;
 public class Shotgun : MonoBehaviour, IWeapon
 {
     [SerializeField] Transform bullet;
+    [SerializeField] GameObject barrelParent;
     List<Transform> barrels = new List<Transform>();
     public float fireDelay;
     public bool canFire = true;
@@ -22,8 +23,6 @@ public class Shotgun : MonoBehaviour, IWeapon
 
             StartCoroutine(resetFireDelay());
         }
-
-        
     }
 
     private IEnumerator resetFireDelay() {
@@ -33,17 +32,17 @@ public class Shotgun : MonoBehaviour, IWeapon
 
     public void GetBarrels() {
         barrels.Clear();
-        int children = this.transform.childCount;
+        int children = barrelParent.transform.childCount;
 
         for (int i = 0; i < children; ++i)
-            barrels.Add(this.transform.GetChild(i));
+            barrels.Add(barrelParent.transform.GetChild(i));
     }
 
     public void InitAfterSwitch() {
 
-        //StopAllCoroutines();
+     
         canFire = true;
         GetBarrels();
-        Debug.Log(this.name + " is ready to fire");
+       //Debug.Log(this.name + " is ready to fire");
     }
 }

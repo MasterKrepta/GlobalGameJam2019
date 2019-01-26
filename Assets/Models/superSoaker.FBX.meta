@@ -1,14 +1,21 @@
 fileFormatVersion: 2
-guid: f288bb1e2edeb5145a428acaa254bfab
+guid: 065c55d508c942e4f9777ea7b3ffabf4
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: superSoaker_Pump
     400000: //RootNode
-    2100000: No Name
+    400002: superSoaker_Pump
+    2100000: superSoaker
     2300000: //RootNode
+    2300002: superSoaker_Pump
     3300000: //RootNode
+    3300002: superSoaker_Pump
     4300000: superSoaker
+    4300002: superSoaker_Pump
+    7400000: SuperSoakerPump
+    11100000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -36,7 +43,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: SuperSoakerPump
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 12.000001
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -89,7 +124,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
