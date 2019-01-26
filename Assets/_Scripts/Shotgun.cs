@@ -19,15 +19,22 @@ public class Shotgun : MonoBehaviour, IWeapon
     }
 
     public void Fire() {
- 
-        anim.Play("Fire");
-        if (canFire) {
-            canFire = false;
-            foreach (Transform barrel in barrels) {
-                Instantiate(bullet, barrel.position, barrel.rotation);
-            }
+        if (Inventory.instance.shotgunAmmo > 0) {
 
-            StartCoroutine(resetFireDelay());
+            Inventory.instance.shotgunAmmo--;
+            anim.Play("Fire");
+            if (canFire) {
+                canFire = false;
+                foreach (Transform barrel in barrels) {
+                    Instantiate(bullet, barrel.position, barrel.rotation);
+                }
+
+                StartCoroutine(resetFireDelay());
+            }
+        }
+        else {
+            Debug.Log("shotgun ammo empty");
+            Inventory.instance.shotgunAmmo = 0;
         }
     }
 

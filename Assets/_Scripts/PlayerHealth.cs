@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour, IDamageable
 {
-    [SerializeField] float currentHealth;
+   public float currentHealth;
+   public float currentArmor;
 
-    [SerializeField] Enemy stats;
+    public Enemy stats;
     private float invulTime = 2f;
 
     [SerializeField] bool canTakeDamage = true;
 
     // Start is called before the first frame update
     void Start() {
-
+        currentArmor = 100f;
         currentHealth = stats.maxHealth;
     }
 
@@ -24,10 +25,18 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     }
 
     public void TakeDamage(float dmg) {
+   
         if (canTakeDamage) {
+
             canTakeDamage = false;
             StartCoroutine(Invincibility());
-            currentHealth--;
+            if (currentArmor > 0) {
+                currentArmor--;
+            }
+            else {
+                currentHealth--;
+            }
+            
         }
        
         if (currentHealth <= 0) {
@@ -39,5 +48,11 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     IEnumerator Invincibility() {
         yield return new WaitForSeconds(invulTime);
         canTakeDamage = true;
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if (true) {
+
+        }
     }
 }

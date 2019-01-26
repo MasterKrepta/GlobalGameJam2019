@@ -28,7 +28,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 065c55d508c942e4f9777ea7b3ffabf4, type: 3}
       propertyPath: m_Name
-      value: superSoaker
+      value: superSoaker Variant
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 065c55d508c942e4f9777ea7b3ffabf4, type: 3}
       propertyPath: m_IsActive
