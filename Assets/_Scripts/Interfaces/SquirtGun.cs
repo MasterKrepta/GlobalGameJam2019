@@ -6,6 +6,7 @@ using UnityEngine;
 public class SquirtGun : MonoBehaviour, IWeapon
 {
     [SerializeField] LineRenderer line;
+    [SerializeField] Transform barrel;
 
     private void Start() {
        
@@ -41,13 +42,11 @@ public class SquirtGun : MonoBehaviour, IWeapon
         line.enabled = false;
     }
 
-    public void GetBarrels() {
-        throw new System.NotImplementedException();
-    }
+    public void GetBarrels() { }
 
-    public void InitAfterSwitch() {
-        throw new System.NotImplementedException();
-    }
+
+
+    public void InitAfterSwitch() {}
 
   
 }
