@@ -9,12 +9,18 @@ public class Shotgun : MonoBehaviour, IWeapon
     List<Transform> barrels = new List<Transform>();
     public float fireDelay;
     public bool canFire = true;
+    Animator anim;
 
     private void Start() {
+  
         GetBarrels();
+        anim = GetComponent<Animator>();
+        anim.StopPlayback();
     }
 
     public void Fire() {
+ 
+        anim.Play("Fire");
         if (canFire) {
             canFire = false;
             foreach (Transform barrel in barrels) {

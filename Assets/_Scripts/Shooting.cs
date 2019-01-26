@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-
+    Animator anim;
     [SerializeField] GameObject[] guns;
      int gunId;
      GameObject oldGun;
@@ -18,9 +18,11 @@ public class Shooting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         currentGun = guns[gunId];
         newGun = guns[1];
         active = currentGun.GetComponent<IWeapon>();
+        anim = currentGun.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -34,9 +36,7 @@ public class Shooting : MonoBehaviour
         if (d!= 0) {
             SwitchGuns();
         }
- 
     }
-
 
     void SwitchGuns() {
 
@@ -57,7 +57,6 @@ public class Shooting : MonoBehaviour
         oldGun.SetActive(false);
         newgun.SetActive(true);
         currentGun = newGun;
-        currentGun.GetComponent<IWeapon>().InitAfterSwitch(); ;
-
+        currentGun.GetComponent<IWeapon>().InitAfterSwitch();
     }
 }

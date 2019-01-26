@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 6eff0f762fb188248930e007e7de80de, type: 3}
       propertyPath: m_Name
-      value: shotgun Variant
+      value: shotgun
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6eff0f762fb188248930e007e7de80de, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25,7 +25,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6eff0f762fb188248930e007e7de80de, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6eff0f762fb188248930e007e7de80de, type: 3}
       propertyPath: m_LocalRotation.y
@@ -33,11 +33,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6eff0f762fb188248930e007e7de80de, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6eff0f762fb188248930e007e7de80de, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6eff0f762fb188248930e007e7de80de, type: 3}
       propertyPath: m_RootOrder
