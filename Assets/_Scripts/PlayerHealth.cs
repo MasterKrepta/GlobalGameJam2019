@@ -16,6 +16,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     void Start() {
         currentArmor = 100f;
         currentHealth = stats.maxHealth;
+        UpdateUi.UpdateStats();
     }
 
 
@@ -31,10 +32,10 @@ public class PlayerHealth : MonoBehaviour, IDamageable
             canTakeDamage = false;
             StartCoroutine(Invincibility());
             if (currentArmor > 0) {
-                currentArmor--;
+                currentArmor -= dmg;
             }
             else {
-                currentHealth--;
+                currentHealth -= dmg;
             }
             
         }
@@ -50,9 +51,5 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         canTakeDamage = true;
     }
 
-    private void OnTriggerEnter(Collider other) {
-        if (true) {
 
-        }
-    }
 }

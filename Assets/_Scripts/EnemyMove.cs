@@ -13,6 +13,11 @@ public class EnemyMove : MonoBehaviour
     [SerializeField] Enemy stats;
     [SerializeField] float attackRange;
     [SerializeField] float throwRange;
+
+    [SerializeField] Transform throwPoint;
+    [SerializeField] Transform throwPrefab;
+    [SerializeField] bool canFire = true;
+    [SerializeField] float fireDelay;
     
     // Start is called before the first frame update
     void Start()
@@ -26,40 +31,62 @@ public class EnemyMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.LookAt(player.transform);
         float distToTarget = Vector3.Distance(player.transform.position, transform.position);
         //Debug.Log(distToTarget + " away");
         switch (currentMode) {
             case Modes.CHASING:
                 //Debug.Log("chasing");
-                anim.SetBool("attacking", false);
-                anim.SetBool("throwing", false);
+  
                 agent.speed = stats.moveSpeed;
-                agent.SetDestination(player.transform.position);
+                if (currentMode != Modes.THROWING) {
+                    agent.SetDestination(player.transform.position);
+                }
 
-                
                 if (distToTarget <= attackRange) {
+
+                    anim.SetBool("attacking", true);
+                    anim.SetBool("throwing", false);
+                
                     currentMode = Modes.ATTACKING;
                 }
                 else if (distToTarget <= throwRange) {
+
+                    anim.SetBool("attacking", false);
+                    anim.SetBool("throwing", true);
+                    agent.Stop();
                     currentMode = Modes.THROWING;
                 }
                 break;
             case Modes.THROWING:
                 Debug.Log("Throwing");
-                anim.SetBool("attacking", false);
-                anim.SetBool("throwing", true);
+                Fire();
                 //TODO instatiate projectile
 
                 if (distToTarget > throwRange) {
+
+                    anim.SetBool("attacking", false);
+                    anim.SetBool("throwing", false);
                     currentMode = Modes.CHASING;
+                }
+                if (distToTarget <= attackRange) {
+
+                    anim.SetBool("attacking", true);
+                    anim.SetBool("throwing", false);
+                   
+                    currentMode = Modes.ATTACKING;
                 }
                 break;
             case Modes.ATTACKING:
+              
+            
                 Debug.Log("attacking");
-                anim.SetBool("attacking", true);
-                anim.SetBool("throwing", true);
+                
                 player.TakeDamage(stats.damageDealt);
                 if (distToTarget > attackRange) {
+     
+                    anim.SetBool("attacking", false);
+                    anim.SetBool("throwing", false);
                     currentMode = Modes.CHASING;
                 }
                 break;
@@ -67,5 +94,20 @@ public class EnemyMove : MonoBehaviour
                 break;
         }
   
+    }
+
+    public void Fire() {
+      
+        if (canFire) {
+            canFire = false;
+             StartCoroutine(resetFireDelay());
+        }
+    }
+
+
+    private IEnumerator resetFireDelay() {
+        yield return new WaitForSeconds(fireDelay);
+        Instantiate(throwPrefab, throwPoint.position, throwPoint.rotation);
+        canFire = true;
     }
 }

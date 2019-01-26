@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2192758435946220275}
   - component: {fileID: 6243267311317440100}
   m_Layer: 0
-  m_Name: ammopickup
+  m_Name: armorPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

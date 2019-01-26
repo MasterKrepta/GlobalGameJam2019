@@ -15,8 +15,8 @@ public class ArmorPack : Ammo
         Debug.Log(this.gameObject.name + " has been picked up");
 
         player.currentArmor += amount;
-        if (player.currentArmor > 100) {
-            player.currentArmor = 100;
+        if (player.currentArmor > player.stats.maxArmor) {
+            player.currentArmor = player.stats.maxArmor;
         }
         Destroy(this.gameObject);
     }

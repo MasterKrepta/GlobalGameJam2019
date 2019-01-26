@@ -31,6 +31,7 @@ public class Inventory : MonoBehaviour
         Ammo a = other.GetComponent<Ammo>();
         if (a != null) {
             a.Pickup();
+            UpdateUi.UpdateStats();
         }
     }
 }

@@ -28,18 +28,20 @@ public class SquirtGun : MonoBehaviour, IWeapon
             while (Input.GetMouseButton(0) && Inventory.instance.soakerAmmo >0) {
 
                 Inventory.instance.soakerAmmo--;
-                Ray ray = new Ray(transform.position, transform.right);
+            UpdateUi.UpdateStats();
+            Ray ray = new Ray(transform.position, transform.right);
                 RaycastHit hit;
                 line.SetPosition(0, ray.origin);
-                if (Physics.Raycast(ray, out hit, 10)) {
+                if (Physics.Raycast(ray, out hit, 20)) {
                     line.SetPosition(1, hit.point);
                     IDamageable d = hit.transform.GetComponent<IDamageable>();
+
                     if (d != null) {
                         d.TakeDamage(1);
                     }
                 }
                 else {
-                    line.SetPosition(1, ray.GetPoint(10));
+                    line.SetPosition(1, ray.GetPoint(20));
                 }
 
                 yield return null;

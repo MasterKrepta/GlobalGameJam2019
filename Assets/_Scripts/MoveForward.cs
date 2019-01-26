@@ -6,7 +6,7 @@ public class MoveForward : MonoBehaviour
 {
     Rigidbody rb;
     [SerializeField]private float speed = 50f;
-    float lifetime = 2f;
+    float lifetime = 1f;
 
     // Start is called before the first frame update
     void Start()

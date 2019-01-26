@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: WalkingTrees
   m_EditorClassIdentifier: 
   maxHealth: 20
-  damageDealt: 2
+  damageDealt: 10
   moveSpeed: 0.5
