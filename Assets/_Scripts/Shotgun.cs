@@ -20,8 +20,6 @@ public class Shotgun : MonoBehaviour, IWeapon
 
     public void Fire() {
         if (Inventory.instance.shotgunAmmo > 0) {
-
-        
             if (canFire) {
                 Inventory.instance.shotgunAmmo--;
                 anim.Play("Fire");
@@ -54,8 +52,6 @@ public class Shotgun : MonoBehaviour, IWeapon
     }
 
     public void InitAfterSwitch() {
-
-     
         canFire = true;
         GetBarrels();
        //Debug.Log(this.name + " is ready to fire");

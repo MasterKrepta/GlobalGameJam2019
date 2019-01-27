@@ -14,15 +14,18 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     [SerializeField] Color HitColor = Color.red;
     // Start is called before the first frame update
     void Start() {
+        init();
+    }
+
+    void init() {
         original = GetComponentInChildren<Renderer>().material.color;
         currentHealth = stats.maxHealth;
     }
 
-
     public void Die() {
         ChanceForLoot();
         Destroy(this.gameObject);
-        //TODO give points or spawn next one
+      
     }
 
     private void ChanceForLoot() {
@@ -52,8 +55,6 @@ public class EnemyHealth : MonoBehaviour, IDamageable
             Die();
         }
     }
-
-
 
     IEnumerator Flash() {
         Renderer[] renderers = GetComponentsInChildren<Renderer>();

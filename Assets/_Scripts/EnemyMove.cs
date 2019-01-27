@@ -22,7 +22,7 @@ public class EnemyMove : MonoBehaviour
     bool canPlayAudio = true;
 
     // Start is called before the first frame update
-    void Start() {
+    void Awake() {
         anim = GetComponentInChildren<Animator>();
         player = FindObjectOfType<PlayerHealth>();
         agent = GetComponent<NavMeshAgent>();

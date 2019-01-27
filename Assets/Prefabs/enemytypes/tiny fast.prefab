@@ -60,7 +60,7 @@ Transform:
   m_GameObject: {fileID: 2866778783977333411}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.04, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 6197366032202024189}
   - {fileID: 3034880409911542943}
@@ -78,7 +78,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 4, z: 1}
+  m_Size: {x: 1, y: 3, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &2866778783977333408
 MonoBehaviour:
@@ -99,7 +99,6 @@ MonoBehaviour:
   - {fileID: 4188023254157108714, guid: e48290b94badcd04ab02b63dc5ba4d1c, type: 3}
   - {fileID: 1522779601, guid: 40f1a35a6d706cf46963305a8be023bd, type: 3}
   currentHealth: 0
-  hitParticle: {fileID: 0}
   original: {r: 0, g: 0, b: 0, a: 0}
   HitColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &2866778783977333402

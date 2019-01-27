@@ -29,12 +29,14 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         currentArmor = 0f;
         currentHealth = stats.maxHealth;
         UpdateUi.UpdateStats();
+       
     }
 
     private void Update() {
         if (dead) {
             if (Input.GetKeyDown(KeyCode.R)) {
-                SceneManager.LoadScene(1); 
+                StartCoroutine(Restart());
+             
                 
             }
         }
@@ -43,6 +45,11 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         }
     }
 
+
+    IEnumerator Restart() {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene(1);
+    }
     private void Cheating() {
         Debug.Log("CHEATS ENGAGED");
         currentArmor = 500;
