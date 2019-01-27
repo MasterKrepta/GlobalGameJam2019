@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   maxArmor: 0
-  damageDealt: 10
+  damageDealt: 5
   moveSpeed: 0.5

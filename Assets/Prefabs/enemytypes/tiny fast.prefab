@@ -65,7 +65,7 @@ MonoBehaviour:
   - {fileID: 2192758435946220275, guid: 9fe8dadee2811e24e82eaa3df693e328, type: 3}
   - {fileID: 7105176803565038583, guid: 385d6aac22a8ba644955e745f74b9789, type: 3}
   - {fileID: 7573883383221649020, guid: f939717f1b4bdc640a3c61260c45e9d2, type: 3}
-  - {fileID: 4661457684490702538, guid: b2b31a85086627b45884d182c52c6296, type: 3}
+  - {fileID: 4610953043748952511, guid: 57b84604773126649851311117299ad0, type: 3}
   currentHealth: 0
   original: {r: 0, g: 0, b: 0, a: 0}
   HitColor: {r: 1, g: 0, b: 0, a: 1}
