@@ -37,6 +37,7 @@ public class Shooting : MonoBehaviour
         var d = Input.GetAxis("Mouse ScrollWheel");
         if (d!= 0) {
             SwitchGuns();
+            UpdateUi.UpdateStats();
         }
     }
 

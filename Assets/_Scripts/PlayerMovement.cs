@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpForce = 15f;
     [SerializeField] LayerMask ground;
     [SerializeField] float distToGround;
-    float gravity = 30f;
+    [SerializeField]float gravity = 30f;
 
     CharacterController cc;
     Rigidbody rb;
@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = false;
         rb = GetComponent<Rigidbody>();
         cc = GetComponent<CharacterController>();
         isGrounded = true;
@@ -29,29 +30,31 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            Cursor.visible = !Cursor.visible;
+        }
+
         float inputX = Input.GetAxis("Horizontal");
 		float inputY = Input.GetAxis("Vertical");
 
-        //Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        Vector3 moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
+
+        Vector3 moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         moveDirection = transform.TransformDirection(moveDirection);
         moveDirection = moveDirection * moveSpeed;
-        cc.Move(moveDirection * Time.deltaTime * moveSpeed);
+        //cc.Move(moveDirection * Time.deltaTime * moveSpeed);
      
 
-        //transform.Translate( Vector3.right * inputX * Time.deltaTime * moveSpeed);
-        //transform.Translate( Vector3.forward * inputY * Time.deltaTime * moveSpeed);
+
 
         float h = rotSpeed * Input.GetAxis("Mouse X");
         transform.Rotate(0, h * Time.deltaTime, 0);
 
 
-        //if (Input.GetButtonDown("Jump") && isGrounded) {
-        if (Input.GetButtonDown("Jump")&& isGrounded) { //THIS IS HACKY
-            //rb.AddForce(transform.up * jumpForce);
-            moveDirection.y = jumpForce;
-        }
+        ////if (Input.GetButtonDown("Jump") && isGrounded) {
+        //if (Input.GetButtonDown("Jump")&& isGrounded) { //THIS IS HACKY
+        //    //rb.AddForce(transform.up * jumpForce);
+        //    moveDirection.y = jumpForce ;
+        //}
         // Apply gravity
         moveDirection.y = moveDirection.y - (gravity * Time.deltaTime);
 

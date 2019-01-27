@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6708560620833462190}
   - component: {fileID: 8452006508055744167}
   - component: {fileID: 8166482729499123173}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: final waspNest
   m_TagString: Untagged
   m_Icon: {fileID: 0}

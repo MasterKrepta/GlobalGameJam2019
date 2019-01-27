@@ -19,6 +19,8 @@ public class EnemyMove : MonoBehaviour
     [SerializeField] bool canFire = true;
     [SerializeField] float fireDelay;
 
+    bool canPlayAudio = true;
+
     // Start is called before the first frame update
     void Start() {
         anim = GetComponentInChildren<Animator>();
@@ -31,6 +33,11 @@ public class EnemyMove : MonoBehaviour
     void Update() {
         transform.LookAt(player.transform);
         float distToTarget = Vector3.Distance(player.transform.position, transform.position);
+
+        if (currentMode != Modes.CHASING && canPlayAudio) {
+            canPlayAudio = false;
+            StartCoroutine(PlayGrunt());
+        }
         //Debug.Log(distToTarget + " away");
         switch (currentMode) {
             case Modes.CHASING:
@@ -102,10 +109,17 @@ public class EnemyMove : MonoBehaviour
         }
     }
 
+    
 
     private IEnumerator resetFireDelay() {
         yield return new WaitForSeconds(fireDelay);
         Instantiate(throwPrefab, throwPoint.position, throwPoint.rotation);
         canFire = true;
+    }
+
+    IEnumerator PlayGrunt() {
+        SoundManager.instance.PlayClip(SoundManager.instance.enemyGrunt);
+        yield return new WaitForSeconds(7);
+        canPlayAudio = true;
     }
 }

@@ -23,6 +23,7 @@ public class Shotgun : MonoBehaviour, IWeapon
 
             Inventory.instance.shotgunAmmo--;
             anim.Play("Fire");
+            SoundManager.instance.PlayClip(SoundManager.instance.shotgun);
             if (canFire) {
                 canFire = false;
                 foreach (Transform barrel in barrels) {

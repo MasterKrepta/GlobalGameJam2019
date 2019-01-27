@@ -7,6 +7,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     [SerializeField]Enemy stats;
     [SerializeField] List<Transform> spawnables = new List<Transform>();
     [SerializeField]float currentHealth;
+    [SerializeField] GameObject hitParticle;
 
     private float flashTime = .2f;
     [SerializeField] Color original;
@@ -39,8 +40,14 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     public void TakeDamage(float dmg) {
         StartCoroutine(Flash());
         currentHealth -= dmg;
+
+        //TODO hit particle - no time to add
+            //Instantiate(hitParticle, transform.position, Quaternion.identity);
+
+        SoundManager.instance.PlayClip(SoundManager.instance.enemyHurt);
         UpdateUi.UpdateStats();
         if (currentHealth<= 0) {
+            SoundManager.instance.PlayClip(SoundManager.instance.enemyDie);
             Die();
         }
     }
@@ -60,4 +67,5 @@ public class EnemyHealth : MonoBehaviour, IDamageable
             }
         }
     }
+   
 }

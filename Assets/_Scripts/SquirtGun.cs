@@ -26,8 +26,8 @@ public class SquirtGun : MonoBehaviour, IWeapon
 
             line.enabled = true;
             while (Input.GetMouseButton(0) && Inventory.instance.soakerAmmo >0) {
-
-                Inventory.instance.soakerAmmo--;
+            SoundManager.instance.PlayClip(SoundManager.instance.water);
+            Inventory.instance.soakerAmmo--;
                 UpdateUi.UpdateStats();
             Ray ray = new Ray(barrel.position, transform.right);
                 RaycastHit hit;
@@ -46,8 +46,9 @@ public class SquirtGun : MonoBehaviour, IWeapon
                 yield return null;
 
             }
-        
-       
+        SoundManager.instance.StopAudio();
+
+
         line.enabled = false;
     }
 

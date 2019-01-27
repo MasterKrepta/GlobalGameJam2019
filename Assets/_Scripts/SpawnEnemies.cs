@@ -12,10 +12,18 @@ public class SpawnEnemies : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SpawnWave();
+        InitSpawn();
+   
         StartCoroutine(WaitForNextWave());
     }
 
+    void InitSpawn() {
+        for (int i = 0; i < spawnPoints.Count; i++) {
+            int randEnemy = GetRandomIndex(enemiesToSpawn.Count);
+            Instantiate(enemiesToSpawn[randEnemy], spawnPoints[i].position, Quaternion.identity);
+        }
+        StartCoroutine(WaitForNextWave());
+    }
     void SpawnWave() {
         for (int i = 0; i < numToSpawn; i++) {
             int randPoint = GetRandomIndex(spawnPoints.Count);
@@ -28,7 +36,7 @@ public class SpawnEnemies : MonoBehaviour
 
     IEnumerator WaitForNextWave() {
         yield return new WaitForSeconds(spawnRate);
-        numToSpawn++;
+        //numToSpawn++;
         SpawnWave();
     }
     int GetRandomIndex(int maxCount) {
