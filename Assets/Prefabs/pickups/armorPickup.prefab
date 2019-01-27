@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2192758435946220275}
   - component: {fileID: 6243267311317440100}
+  - component: {fileID: 7135316164617345991}
   m_Layer: 0
   m_Name: armorPickup
   m_TagString: Untagged
@@ -45,6 +46,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotSpeed: 200
+--- !u!114 &7135316164617345991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8502049893485461991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b190c92f147bfb0488a6d41d8d35c076, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  amount: 25
 --- !u!1001 &2469643807452978131
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -112,8 +127,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5788574541148166872, guid: 41bc97a2274124f4693d3851e4707e0d, type: 3}
+    - target: {fileID: 8701868331527342965, guid: 41bc97a2274124f4693d3851e4707e0d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 73ad03169bdac3d409ed8cd117420016, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41bc97a2274124f4693d3851e4707e0d, type: 3}
 --- !u!4 &6523130709953466950 stripped
 Transform:

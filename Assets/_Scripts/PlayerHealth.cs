@@ -37,7 +37,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
             else {
                 currentHealth -= dmg;
             }
-            
+            UpdateUi.UpdateStats();
         }
        
         if (currentHealth <= 0) {

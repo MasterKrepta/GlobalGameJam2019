@@ -23,8 +23,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8463860796260709805}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 2}
+  m_LocalRotation: {x: -0.000000004331969, y: -0.0000000027976514, z: 3.3416155e-15,
+    w: 1}
+  m_LocalPosition: {x: -0, y: 1.5, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8610167348092525885}
@@ -107,8 +108,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 028f02c81b8f46240a9580977b785609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentMode: 0
   stats: {fileID: 11400000, guid: 5f9ecf5b06a300a4096e8812fbd8dd45, type: 2}
   attackRange: 2
+  throwRange: 20
+  throwPoint: {fileID: 5807374223602290476}
+  throwPrefab: {fileID: 500872140072610843, guid: 86d904dd67a1f18449c2d46008507da1,
+    type: 3}
+  canFire: 1
+  fireDelay: 1
 --- !u!195 &8610167348092525886
 NavMeshAgent:
   m_ObjectHideFlags: 0

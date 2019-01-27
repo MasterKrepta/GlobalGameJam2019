@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100006, guid: 93e2fd264f9ea9341a3098e859419810, type: 3}
       propertyPath: m_Name
-      value: kingTree
+      value: kingTree Variant
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 93e2fd264f9ea9341a3098e859419810, type: 3}
       propertyPath: m_LocalPosition.x
@@ -62,7 +62,7 @@ PrefabInstance:
     - target: {fileID: 13700000, guid: 93e2fd264f9ea9341a3098e859419810, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e718c8ae293c74c4fa3cc6188d3f5a42, type: 2}
+      objectReference: {fileID: 2100000, guid: a6eef4304d323944e8389c5db63e79d3, type: 2}
     - target: {fileID: 13700000, guid: 93e2fd264f9ea9341a3098e859419810, type: 3}
       propertyPath: m_Bones.Array.data[0]
       value: 

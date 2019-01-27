@@ -13,11 +13,13 @@ public class ArmorPack : Ammo
     }
     public override void Pickup() {
         //Debug.Log(this.gameObject.name + " has been picked up");
-
-        player.currentArmor += amount;
-        if (player.currentArmor > player.stats.maxArmor) {
-            player.currentArmor = player.stats.maxArmor;
+        if (player.currentArmor != player.stats.maxArmor) {
+            player.currentArmor += amount;
+            if (player.currentArmor > player.stats.maxArmor) {
+                player.currentArmor = player.stats.maxArmor;
+            }
+            Destroy(this.gameObject);
         }
-        Destroy(this.gameObject);
+     
     }
 }

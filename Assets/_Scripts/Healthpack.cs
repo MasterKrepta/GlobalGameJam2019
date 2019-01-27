@@ -12,12 +12,15 @@ public class Healthpack : Ammo
         player = FindObjectOfType<PlayerHealth>();
     }
     public override void Pickup() {
-        Debug.Log(this.gameObject.name + " has been picked up");
+     
+        if (player.currentHealth != player.stats.maxHealth) {
 
-        player.currentHealth += amount;
-        if (player.currentHealth > player.stats.maxHealth) {
-            player.currentHealth = player.stats.maxHealth;
+            player.currentHealth += amount;
+            if (player.currentHealth > player.stats.maxHealth) {
+                player.currentHealth = player.stats.maxHealth;
+            }
+            Destroy(this.gameObject);
         }
-        Destroy(this.gameObject);
+       
     }
 }
