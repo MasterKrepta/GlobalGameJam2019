@@ -27,19 +27,15 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     }
 
     private void ChanceForLoot() {
-        //System.Random rnd = new System.Random;
-        //int val = rnd.Next(1, 10);
-        //if (val < 3) {
-        //    Instantiate(spawnables[UnityEngine.Random.Range(0, spawnables.Count - 1)], transform.position, Quaternion.identity);
-        //    Debug.Log("we spawned loot");
-        //    //10% probabilty of coming to this block
-        //    //Spawn an object which has 10% probability
-        //    //1/10 = 0.1
-        //}
-        //else if (val < 6) {
-        //    //50% probabilty
-        //    // 1/10 + 1/10 + 1/10 + 1/10 + 1/10 + 1/10 = 5/10 = 0.5
-        //}
+        System.Random rnd = new System.Random();
+        int val = rnd.Next(1, 10);
+        if (val < 6) {
+            Instantiate(spawnables[UnityEngine.Random.Range(0, spawnables.Count - 1)], transform.position, Quaternion.identity);
+            Debug.Log("we spawned loot");
+            //50% probabilty
+            // 1/10 + 1/10 + 1/10 + 1/10 + 1/10 + 1/10 = 5/10 = 0.5
+        }
+   
     }
 
     public void TakeDamage(float dmg) {

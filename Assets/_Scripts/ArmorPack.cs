@@ -12,7 +12,7 @@ public class ArmorPack : Ammo
         player = FindObjectOfType<PlayerHealth>();
     }
     public override void Pickup() {
-        Debug.Log(this.gameObject.name + " has been picked up");
+        //Debug.Log(this.gameObject.name + " has been picked up");
 
         player.currentArmor += amount;
         if (player.currentArmor > player.stats.maxArmor) {

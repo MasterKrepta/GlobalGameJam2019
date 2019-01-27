@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         //    return false;
         //}
         
-        return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f);
+        return Physics.Raycast(transform.position, -Vector3.down, distToGround/* + 0.1f*/);
     }
 
     private void OnDrawGizmosSelected() {
