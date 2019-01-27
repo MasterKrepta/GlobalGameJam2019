@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   maxHealth: 100
+  maxArmor: 200
   damageDealt: 0
   moveSpeed: 3.5

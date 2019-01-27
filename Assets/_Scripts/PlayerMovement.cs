@@ -58,6 +58,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnDrawGizmosSelected() {
         
-        //Debug.DrawLine(transform.position,  transform.position - distToGround, Color.red);
+        //Debug.DrawLine(transform.position,  transform.position.y - distToGround, Color.red);
     }
 }
