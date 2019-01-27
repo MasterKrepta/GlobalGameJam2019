@@ -29,7 +29,7 @@ public class Shooting : MonoBehaviour
     void Update()
     {
         active = currentGun.GetComponent<IWeapon>();
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0) || Input.GetAxis("Fire1") == 1) {
 
             active.Fire();
             UpdateUi.UpdateStats();
