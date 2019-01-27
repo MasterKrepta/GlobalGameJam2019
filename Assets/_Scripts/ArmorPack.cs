@@ -12,7 +12,7 @@ public class ArmorPack : Ammo
         player = FindObjectOfType<PlayerHealth>();
     }
     public override void Pickup() {
-        //Debug.Log(this.gameObject.name + " has been picked up");
+        Debug.Log(this.gameObject.name + " has been picked up");
         if (player.currentArmor != player.stats.maxArmor) {
             player.currentArmor += amount;
             if (player.currentArmor > player.stats.maxArmor) {
@@ -21,5 +21,13 @@ public class ArmorPack : Ammo
             Destroy(this.gameObject);
         }
      
+        
     }
+    //private void OnTriggerEnter(Collider other) {
+    //    PlayerHealth h = other.GetComponent<PlayerHealth>();
+    //    if (h != null) {
+    //            Pickup();
+    //        UpdateUi.UpdateStats();
+    //    }
+    //}
 }

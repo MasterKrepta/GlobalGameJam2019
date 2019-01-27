@@ -9,8 +9,16 @@ public class SoakerAmmo : Ammo
 
 
     public override void Pickup() {
+        Debug.Log(this.gameObject.name + " has been picked up");
         Inventory.instance.soakerAmmo += amount;
 
     }
+    //private void OnTriggerEnter(Collider other) {
+    //    PlayerHealth h = other.GetComponent<PlayerHealth>();
+    //    if (h != null) {
+    //        Pickup();
+    //        UpdateUi.UpdateStats();
+    //    }
+    //}
 }
 

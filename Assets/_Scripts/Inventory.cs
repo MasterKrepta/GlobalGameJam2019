@@ -27,10 +27,11 @@ public class Inventory : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-  
+        //Debug.Log(other.name);
         Ammo a = other.GetComponent<Ammo>();
         if (a != null) {
             a.Pickup();
+            Destroy(other.gameObject);
             UpdateUi.UpdateStats();
         }
     }

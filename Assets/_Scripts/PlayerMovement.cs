@@ -10,13 +10,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpForce = 15f;
     [SerializeField] LayerMask ground;
     [SerializeField] float distToGround;
-  
+    float gravity = 30f;
+
+    CharacterController cc;
     Rigidbody rb;
     [SerializeField] bool isGrounded = true;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        cc = GetComponent<CharacterController>();
         isGrounded = true;
     }
 
@@ -29,21 +32,32 @@ public class PlayerMovement : MonoBehaviour
         
         float inputX = Input.GetAxis("Horizontal");
 		float inputY = Input.GetAxis("Vertical");
-		
-		Vector3 movement = new Vector3(Input.GetAxis("Horizontal"),0,0);
-    
-		transform.Translate( Vector3.right * inputX * Time.deltaTime * moveSpeed);
-		transform.Translate( Vector3.forward * inputY * Time.deltaTime * moveSpeed);
-		
-		float h = rotSpeed * Input.GetAxis("Mouse X");
+
+        //Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        Vector3 moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
+        moveDirection = transform.TransformDirection(moveDirection);
+        moveDirection = moveDirection * moveSpeed;
+        cc.Move(moveDirection * Time.deltaTime * moveSpeed);
+     
+
+        //transform.Translate( Vector3.right * inputX * Time.deltaTime * moveSpeed);
+        //transform.Translate( Vector3.forward * inputY * Time.deltaTime * moveSpeed);
+
+        float h = rotSpeed * Input.GetAxis("Mouse X");
         transform.Rotate(0, h * Time.deltaTime, 0);
 
-        
-        if (Input.GetButtonDown("Jump") && isGrounded) {
-            rb.AddForce(transform.up * jumpForce);
+
+        //if (Input.GetButtonDown("Jump") && isGrounded) {
+        if (Input.GetButtonDown("Jump")&& isGrounded) { //THIS IS HACKY
+            //rb.AddForce(transform.up * jumpForce);
+            moveDirection.y = jumpForce;
         }
-	
-	}
+        // Apply gravity
+        moveDirection.y = moveDirection.y - (gravity * Time.deltaTime);
+
+        // Move the controller
+        cc.Move(moveDirection * Time.deltaTime);
+    }
 
     bool CheckGrounded() {
    

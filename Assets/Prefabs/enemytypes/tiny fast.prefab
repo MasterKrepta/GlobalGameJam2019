@@ -62,10 +62,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 80bc6d3dd215c01478b4ba6a01888ca4, type: 2}
   spawnables:
-  - {fileID: 2192758435946220275, guid: 9fe8dadee2811e24e82eaa3df693e328, type: 3}
-  - {fileID: 7105176803565038583, guid: 385d6aac22a8ba644955e745f74b9789, type: 3}
-  - {fileID: 7573883383221649020, guid: f939717f1b4bdc640a3c61260c45e9d2, type: 3}
-  - {fileID: 4610953043748952511, guid: 57b84604773126649851311117299ad0, type: 3}
+  - {fileID: 988615889, guid: 04e262e09b827e047ac8d499c1412a1c, type: 3}
+  - {fileID: 323929861, guid: 000557a4b61d6fa4cb289ce5923b713c, type: 3}
+  - {fileID: 4188023254157108714, guid: e48290b94badcd04ab02b63dc5ba4d1c, type: 3}
+  - {fileID: 1522779601, guid: 40f1a35a6d706cf46963305a8be023bd, type: 3}
   currentHealth: 0
   original: {r: 0, g: 0, b: 0, a: 0}
   HitColor: {r: 1, g: 0, b: 0, a: 1}
