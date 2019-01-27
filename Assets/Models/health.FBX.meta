@@ -9,7 +9,12 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: health
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: health
+    second: {fileID: 2100000, guid: cca58dee856b22b4a9dc31e5e57db945, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -10,7 +10,7 @@ public class Shooting : MonoBehaviour
      int gunId;
      GameObject oldGun;
      GameObject newGun;
-   public GameObject currentGun;
+    public GameObject currentGun;
 
 
     IWeapon active;
@@ -30,6 +30,7 @@ public class Shooting : MonoBehaviour
     {
         active = currentGun.GetComponent<IWeapon>();
         if (Input.GetMouseButtonDown(0)) {
+
             active.Fire();
             UpdateUi.UpdateStats();
         }
@@ -59,6 +60,5 @@ public class Shooting : MonoBehaviour
         newgun.SetActive(true);
         currentGun = newGun;
         currentGun.GetComponent<IWeapon>().InitAfterSwitch();
-        UpdateUi.UpdateStats();
     }
 }

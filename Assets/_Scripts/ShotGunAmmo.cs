@@ -9,9 +9,7 @@ public class ShotGunAmmo : Ammo
         [SerializeField] int amount;
 
     public override void Pickup() {
-        Debug.Log(this.gameObject.name + " has been picked up");
-        
         Inventory.instance.shotgunAmmo += amount;
-        Destroy(this.gameObject);
+
     }
 }

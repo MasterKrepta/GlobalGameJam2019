@@ -1,0 +1,181 @@
+fileFormatVersion: 2
+guid: 1dbe2b3006566b44589b0ed0139fa8da
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Rectangle017
+    100004: Rectangle018
+    100006: Rectangle019
+    100008: Rectangle020
+    100010: Rectangle021
+    100012: Rectangle022
+    100014: Rectangle023
+    100016: Rectangle024
+    400000: //RootNode
+    400002: Rectangle017
+    400004: Rectangle018
+    400006: Rectangle019
+    400008: Rectangle020
+    400010: Rectangle021
+    400012: Rectangle022
+    400014: Rectangle023
+    400016: Rectangle024
+    2100000: Grass
+    2100002: Dirt
+    2100004: Brick
+    2100006: Cobblestone
+    2100008: Sand
+    2100010: Stone
+    2100012: Mulch
+    2100014: Water
+    2300000: Rectangle017
+    2300002: Rectangle018
+    2300004: Rectangle019
+    2300006: Rectangle020
+    2300008: Rectangle021
+    2300010: Rectangle022
+    2300012: Rectangle023
+    2300014: Rectangle024
+    3300000: Rectangle017
+    3300002: Rectangle018
+    3300004: Rectangle019
+    3300006: Rectangle020
+    3300008: Rectangle021
+    3300010: Rectangle022
+    3300012: Rectangle023
+    3300014: Rectangle024
+    4300000: Rectangle017
+    4300002: Rectangle018
+    4300004: Rectangle019
+    4300006: Rectangle020
+    4300008: Rectangle021
+    4300010: Rectangle022
+    4300012: Rectangle023
+    4300014: Rectangle024
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick
+    second: {fileID: 2100000, guid: 62e1f25999828e74081ffa2ef3a11a5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cobblestone
+    second: {fileID: 2100000, guid: 41f997df66f1cfd48a429802801e8746, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dirt
+    second: {fileID: 2100000, guid: 4adae7d16bc62004d98cb826162ba2b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grass
+    second: {fileID: 2100000, guid: 6f84d85ae392ddd4e8ee0a6a00036365, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mulch
+    second: {fileID: 2100000, guid: 423edc5f9d6ec86478538011a11faa34, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sand
+    second: {fileID: 2100000, guid: 63150b9d9ec0c9441961692805ca8211, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stone
+    second: {fileID: 2100000, guid: 09d4fc5beebd52e4cb720257d26e4c58, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Water
+    second: {fileID: 2100000, guid: de4d58c098ab601409212bb6fcc638b2, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

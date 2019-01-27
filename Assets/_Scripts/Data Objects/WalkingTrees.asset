@@ -15,4 +15,4 @@ MonoBehaviour:
   maxHealth: 20
   maxArmor: 0
   damageDealt: 10
-  moveSpeed: 3
+  moveSpeed: 0.5

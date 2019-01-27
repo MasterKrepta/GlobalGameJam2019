@@ -8,15 +8,16 @@ public class PlayerMovement : MonoBehaviour
 	
 	[SerializeField] float rotSpeed = 180f;
     [SerializeField] float jumpForce = 15f;
-    [SerializeField] Transform groundCheck;
+    [SerializeField] LayerMask ground;
     [SerializeField] float distToGround;
-    [SerializeField] LayerMask groundlayer;
+  
     Rigidbody rb;
     [SerializeField] bool isGrounded = true;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        isGrounded = true;
     }
 
     private void FixedUpdate() {
@@ -45,19 +46,12 @@ public class PlayerMovement : MonoBehaviour
 	}
 
     bool CheckGrounded() {
-        RaycastHit hitInfo;
-        //if (Physics.SphereCast(groundCheck.position, .5f, -Vector3.up, out hitInfo)) {
-        //    return true;
-        //}
-        //else {
-        //    return false;
-        //}
-        
-        return Physics.Raycast(transform.position, -Vector3.down, distToGround/* + 0.1f*/);
+   
+        return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f);
     }
 
     private void OnDrawGizmosSelected() {
         
-        //Debug.DrawLine(transform.position,  transform.position.y - distToGround, Color.red);
+        //Debug.DrawLine(transform.position,  transform.position - distToGround, Color.red);
     }
 }

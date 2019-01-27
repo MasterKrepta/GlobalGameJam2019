@@ -1,45 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &481582787746236512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3122266558449772873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5187ee3c073bd242b46526b02c079c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotSpeed: 200
---- !u!114 &2263220876065962545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3122266558449772873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05b5893eeaf55e34aa62a601563a3055, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
-  amount: 10
---- !u!65 &3121859007840383377
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3122266558449772873}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1524, y: 0.05080001, z: 0.19445486}
-  m_Center: {x: 0, y: 0, z: 0.09722743}
 --- !u!1001 &3122266558449807337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49,19 +9,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 47e522bdef7eb684584ba00176c4202b, type: 3}
       propertyPath: m_Name
-      value: shotgunAmmo Variant
+      value: shotgunAmmo
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 47e522bdef7eb684584ba00176c4202b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 47e522bdef7eb684584ba00176c4202b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8960726
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 47e522bdef7eb684584ba00176c4202b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.611412e-17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 47e522bdef7eb684584ba00176c4202b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.5271554
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 47e522bdef7eb684584ba00176c4202b, type: 3}
       propertyPath: m_LocalRotation.x
@@ -101,9 +65,3 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 8f27c331e6ad5854ba9dc119bfdc76e6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47e522bdef7eb684584ba00176c4202b, type: 3}
---- !u!1 &3122266558449772873 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: 47e522bdef7eb684584ba00176c4202b,
-    type: 3}
-  m_PrefabInstance: {fileID: 3122266558449807337}
-  m_PrefabAsset: {fileID: 0}

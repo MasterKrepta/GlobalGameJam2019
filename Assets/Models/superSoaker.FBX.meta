@@ -17,7 +17,12 @@ ModelImporter:
     7400000: SuperSoakerPump
     9500000: //RootNode
     11100000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: superSoaker
+    second: {fileID: 2100000, guid: 58b679bd7a48b1643ac5a02d4d9f9997, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

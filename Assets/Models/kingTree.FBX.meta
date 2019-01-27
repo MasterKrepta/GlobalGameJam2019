@@ -172,12 +172,17 @@ ModelImporter:
     7400004: Throw
     9500000: //RootNode
     13700000: TreeKing
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: kingTree
+    second: {fileID: 2100000, guid: a6eef4304d323944e8389c5db63e79d3, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

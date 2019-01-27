@@ -17,7 +17,12 @@ ModelImporter:
     7400000: ShotgunBlast
     9500000: //RootNode
     11100000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shotgun
+    second: {fileID: 2100000, guid: 60dbed42530317f4eb4db1f8a2330f42, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Ammo : MonoBehaviour
 {
-    public enum Type { SHOTGUN, SOAKER, HEALTH, ARMOR};
+    public enum Type { SHOTGUN, SOAKER, ARMOR, HEALTH };
 
     public virtual void Pickup() { }
 }
