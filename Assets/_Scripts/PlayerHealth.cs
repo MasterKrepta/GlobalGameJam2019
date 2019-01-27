@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -33,10 +34,24 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     private void Update() {
         if (dead) {
             if (Input.GetKeyDown(KeyCode.R)) {
-                SceneManager.LoadScene(1); //todo change to 1
+                SceneManager.LoadScene(1); 
                 
             }
         }
+        if (Input.GetKeyDown(KeyCode.G) && Input.GetKeyDown(KeyCode.M)) {
+            Cheating();
+        }
+    }
+
+    private void Cheating() {
+        Debug.Log("CHEATS ENGAGED");
+        currentArmor = 500;
+        currentHealth = 1000;
+        Inventory.instance.shotgunAmmo = 999;
+        Inventory.instance.soakerAmmo = 999;
+        UpdateUi.UpdateStats();
+
+
     }
 
     public void Die() {

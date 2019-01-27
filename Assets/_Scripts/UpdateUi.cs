@@ -37,10 +37,22 @@ public class UpdateUi : MonoBehaviour
 
 
     public static void UpdateStats() {
-        instance.shells.text = "acid: " + Inventory.instance.shotgunAmmo.ToString();
-        instance.acid.text = "shells: " + Inventory.instance.soakerAmmo.ToString();
-        instance.health.text = instance.player.currentHealth.ToString();
-        instance.armor.text = instance.player.currentArmor.ToString();
+        if (instance.player.currentHealth < 100) {
+            instance.health.text = instance.player.currentHealth.ToString();
+           
+        }
+        else {
+            instance.health.text = instance.player.stats.maxHealth.ToString();
+        }
+        if (instance.player.currentArmor < 100) {
+            instance.armor.text = instance.player.currentArmor.ToString();
+        }
+        else {
+            instance.armor.text = instance.player.stats.maxArmor.ToString();
+        }
+        instance.shells.text = "Shells: " + Inventory.instance.shotgunAmmo.ToString();
+        instance.acid.text = "Acid: " + Inventory.instance.soakerAmmo.ToString();
+
         if (instance.shooting.currentGun.name == "superSoaker Variant") {
             instance.ammoCount.text = Inventory.instance.soakerAmmo.ToString();
         }

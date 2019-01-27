@@ -31,6 +31,7 @@ public class Inventory : MonoBehaviour
         Ammo a = other.GetComponent<Ammo>();
         if (a != null) {
             a.Pickup();
+            SoundManager.instance.PlayClip(SoundManager.instance.pickup);
             Destroy(other.gameObject);
             UpdateUi.UpdateStats();
         }

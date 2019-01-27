@@ -30,6 +30,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         int val = rnd.Next(1, 10);
         if (val < 6) {
             Instantiate(spawnables[UnityEngine.Random.Range(0, spawnables.Count - 1)], transform.position, Quaternion.identity);
+            SoundManager.instance.PlayClip(SoundManager.instance.lootDrop);
             Debug.Log("we spawned loot");
             //50% probabilty
             // 1/10 + 1/10 + 1/10 + 1/10 + 1/10 + 1/10 = 5/10 = 0.5

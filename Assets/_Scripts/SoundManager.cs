@@ -14,6 +14,8 @@ public  class SoundManager : MonoBehaviour
 
     public AudioClip shotgun;
     public AudioClip water;
+    public AudioClip pickup;
+    public AudioClip lootDrop;
 
 
     void Awake() {

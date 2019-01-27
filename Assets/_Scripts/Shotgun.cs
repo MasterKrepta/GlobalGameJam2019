@@ -21,10 +21,11 @@ public class Shotgun : MonoBehaviour, IWeapon
     public void Fire() {
         if (Inventory.instance.shotgunAmmo > 0) {
 
-            Inventory.instance.shotgunAmmo--;
-            anim.Play("Fire");
-            SoundManager.instance.PlayClip(SoundManager.instance.shotgun);
+        
             if (canFire) {
+                Inventory.instance.shotgunAmmo--;
+                anim.Play("Fire");
+                SoundManager.instance.PlayClip(SoundManager.instance.shotgun);
                 canFire = false;
                 foreach (Transform barrel in barrels) {
                     Instantiate(bullet, barrel.position, barrel.rotation);
